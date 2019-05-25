@@ -1,1 +1,1 @@
-# machinelearning_AI_javascript
+# Machine Learning AI javascript
