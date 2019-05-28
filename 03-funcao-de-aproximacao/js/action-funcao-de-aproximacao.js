@@ -1,4 +1,4 @@
-﻿function derivada() {
+﻿function derivada(n) {
 	return n * (1 - n);
 }
 
