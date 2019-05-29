@@ -23,6 +23,11 @@ function executar(){
 			"<td>" + zeros(Math.abs(error.toFixed(4))) + "</td>" + 
 			"<td>" + output.toFixed(8) + "</td>" + 
 		"</tr>"
+
+		//corta a execucao quando a saida for igual a busca
+		if(corte(parseFloat(output), parseFloat(target))){
+			i = parseInt(epochs)+1;
+		}
 	}
 
 	$('#linhas').html(lines);
@@ -32,6 +37,15 @@ function executar(){
 	$('#desc_epocas').text('epocas: ' + epochs);
 
 }
+// funcao de corte
+function corte(a, b){
+	if(a.toFixed(2) == b.toFixed(2)){
+		return true;
+	} else {
+		return false;
+	}
+}
+
 
 function zeros(n) {
 	if(n == 0) {
